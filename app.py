@@ -1,14 +1,14 @@
 from flask import Flask, render_template, request
-import requests
 import json
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
+    
     """Return homepage."""
     # TODO: Extract the query term from url using request.args.get()
-
+    
     # TODO: Make 'params' dictionary containing:
     # a) the query term, 'q'
     # b) your API key, 'key'
