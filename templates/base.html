@@ -1,17 +1,35 @@
 <!-- templates/base.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+<!-- comment is here -->
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
-    <title>GIF Search</title>
-</head>
-<body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- TODO: Make a block 'body' so that the homepage can extend base -->
+  <title>Giph Image Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+</head>
+
+<body>
+  <section class="section main-container is-info is-large">
+    <div class="container hero-body hero-items">
+      <h1 class="title is-1">
+        Gif Search
+      </h1>
+    <!-- this div makes a search bar -->
+    <input type="text" class = 'input is-rounded is-small' placeholder="Enter Gif of choice">
+    <button class= "my-button">Get Gif</button>
+  </div>
+</section>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      <!-- TODO: Make a block 'body' so that the homepage can extend base -->
 
     <!-- Include the Tenor JavaScript to fill in GIFs appropriately 
         (note: this script is required, so do not modify/remove it) -->
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+   
 </body>
+
 </html>
