@@ -1,35 +1,34 @@
-<!-- templates/base.html -->
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<!-- comment is here -->
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Giph Image Search</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="/static/style.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
+    <meta charset="utf-8">
+    <title>GIF Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="static/style.css"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
-
 <body>
-  <section class="section main-container is-info is-large">
-    <div class="container hero-body hero-items">
-      <h1 class="title is-1">
-        Gif Search
-      </h1>
-    <!-- this div makes a search bar -->
-    <input type="text" class = 'input is-rounded is-small' placeholder="Enter Gif of choice">
-    <button class= "my-button">Get Gif</button>
-  </div>
-</section>
+    <section class="main-container hero is-large">
+        <div class="main-container">
+          <h1 class="title">
+            Gif Search
+          </h1>
+        <!-- this div makes a search bar -->
+        <!-- <input type="text" class = 'input is-rounded is-small' placeholder="Enter Gif of choice">
+        <button class= "my-button">Get Gif</button> -->
+        <form name="search" action='/test_html' method="get">
+          <input id="searchBar" type="text" placeholder="Search.." class = 'input is-rounded is-small' name="search">
+          <button type="submit" class='my-button' value="Search">Search</button>
+        </form>
+      </div>
+    </section>
+      
+    {% block body %}
+
+
+
+    {% endblock body %}
+    <!-- Include the Tenor JavaScript to fill in GIFs appropriately -->
     <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-      <!-- TODO: Make a block 'body' so that the homepage can extend base -->
-
-    <!-- Include the Tenor JavaScript to fill in GIFs appropriately 
-        (note: this script is required, so do not modify/remove it) -->
-   
 </body>
-
 </html>

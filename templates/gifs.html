@@ -1,0 +1,20 @@
+<head>
+    <title>GIF Search Results</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+{% block content %}
+    {% if gifs %}
+        <h1>
+            Here are your Gif's:
+        </h1>
+        <ul>
+            {% for gif in gifs %}
+                <img src="{{ gif }}">
+                <br>
+            {% endfor %}
+        </ul>
+    {% else %}
+        Have a nice day!
+    {% endif %}
+
+{% endblock %}

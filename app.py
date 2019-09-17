@@ -1,33 +1,35 @@
+
 from flask import Flask, render_template, request
-import json
+import requests
+
+
+lmt = 10
+api_key = "FLT5NN3BW81L"
 
 app = Flask(__name__)
-
 @app.route('/')
 def index():
-    
-    """Return homepage."""
-    # TODO: Extract the query term from url using request.args.get()
-    
-    # TODO: Make 'params' dictionary containing:
-    # a) the query term, 'q'
-    # b) your API key, 'key'
-    # c) how many GIFs to return, 'limit'
-
-    # TODO: Make an API call to Tenor using the 'requests' library. For 
-    # reference on how to use Tenor, see: 
-    # https://tenor.com/gifapi/documentation
-
-    # TODO: Use the '.json()' function to get the JSON of the returned response
-    # object
-
-    # TODO: Using dictionary notation, get the 'results' field of the JSON,
-    # which contains the GIFs as a list
-
-    # TODO: Render the 'index.html' template, passing the list of gifs as a
-    # named parameter called 'gifs'
-
     return render_template("index.html")
 
+@app.route('/test_html')
+def test_html():
+    search_bar_input = request.args.get('search')
+    query_string = "https://api.tenor.com/v1/search?q={}&key={}&limit={}".format(search_bar_input, api_key, lmt)
+
+    r = requests.get(query_string)
+    gifs = []
+    if r.status_code == 200:
+        # load the GIFs using the urls for the smaller GIF sizes
+        r_json = r.json()
+        result_json = r_json["results"]
+        for result in result_json:
+            gif_path = result["media"][0]["mediumgif"]["url"]
+            gifs.append(gif_path)
+        print(gifs)
+    else:
+        r_json = None
+    return render_template("gifs.html", gifs=gifs)
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
