@@ -1,34 +1,29 @@
 
-body {
-    text-align: center;
-  }
-  .hero-items{
-    justify-content: center;
-  }
-  .main-container{
-    height: 100vh;
-    background: #0B5563;
-  }
-  .hero-items{
-    padding: 4rem;
-  }
-  .title {
-    color: #94E8B4;
-  }
-  
-  .my-button {
-    background: #00487C;
-    color: white;
-    padding: 10px 70px;
-    font-size: 2rem;
-    border: none;
-    border-radius: 2rem;
-    margin-top: 3rem;
-    transition: 500ms ease; 
-  }
-  
-  .my-button:hover {
-    background: #00243d;
-  
-  
-  }
+.hero-items{
+  justify-content: center;
+}
+.bg-img{
+  background: #0B5563;
+}
+.hero-items{
+  padding: 4rem;
+}
+.title {
+  color: white;
+}
+
+.my-button {
+  background: #00487C;
+  color: white;
+  padding: 5px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2rem;
+  transition: 500ms ease; 
+}
+
+.my-button:hover {
+  background: #00243d;
+
+
+} 

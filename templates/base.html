@@ -8,17 +8,17 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 <body>
-    <section class="main-container hero is-large">
-        <div class="main-container">
-          <h1 class="title">
-            Gif Search
-          </h1>
+    <section class="hero bg-img is-medium">
+        <div class="hero-body container ">
         <!-- this div makes a search bar -->
         <!-- <input type="text" class = 'input is-rounded is-small' placeholder="Enter Gif of choice">
         <button class= "my-button">Get Gif</button> -->
         <form name="search" action='/test_html' method="get">
-          <input id="searchBar" type="text" placeholder="Search.." class = 'input is-rounded is-small' name="search">
-          <button type="submit" class='my-button' value="Search">Search</button>
+          <h1 class="title has-text-centered">Gif Search</h1>
+          <div class="columns has-text-centered">
+          <div class="column is-half"><input id="searchBar" type="text" placeholder="Search.." class = 'input is-rounded is-small' name="search" required></div>
+          <div class="column is-half"><button type="submit" class='my-button' value="Search">Search  <i style='margin-left:3px;'class="fab fa-searchengin"></i></button></div>
+        </div>
         </form>
       </div>
     </section>
