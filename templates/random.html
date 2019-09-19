@@ -5,10 +5,15 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 {% block content %}
+<div class="container">
+<h1 class="title is-1">Random Gifs:</h1>
+<div class="columns">
     {% if gifs %}
             {% for gif in gifs %}
                 <div class='column'><img src="{{ gif }}"></div>
             {% endfor %}
+        </div>
+    </div>
     {% else %}
         Have a nice day!
     {% endif %}
