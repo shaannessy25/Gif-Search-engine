@@ -1,20 +1,31 @@
 <head>
     <title>GIF Search Results</title>
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 {% block content %}
     {% if gifs %}
-        <h1>
-            Here are your Gif's:
-        </h1>
-        <ul>
+       
+        <section class="hero">
+                <h1 class="title is-1 has-text-centered">
+                        Gif Results:
+                    </h1>
+            <div class="container hero-body">
+                <form name="search" action='/test_html' method="get">
+                    <div class="columns has-text-centered">
+                    <div class="column is-half"><input id="searchBar" type="text" placeholder="Search.." class = 'input is-rounded is-small' name="search" required></div>
+                    <div class="column is-half"><button type="submit" class='my-button' value="Search">Search  <i style='margin-left:3px;'class="fab fa-searchengin"></i></button></div>
+                  </div>
+                </form>
+            </div>
+            </section>
+        <div class="columns gif-section">
             {% for gif in gifs %}
-                <img src="{{ gif }}">
-                <br>
+                <div class='column'><img src="{{ gif }}"></div>
             {% endfor %}
-        </ul>
+        </div>
     {% else %}
         Have a nice day!
     {% endif %}
-
 {% endblock %}

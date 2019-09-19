@@ -22,8 +22,13 @@
   transition: 500ms ease; 
 }
 
-.my-button:hover {
-  background: #00243d;
-
-
-} 
+.my-button:hover {background: #00243d;} 
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 500px 500px 500px; 
+}
+.gif-section{
+  margin: 0 auto;
+  padding: 0 8rem;
+}
