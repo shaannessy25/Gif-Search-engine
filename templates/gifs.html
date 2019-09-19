@@ -11,13 +11,15 @@
                 <h1 class="title is-1 has-text-centered">
                         Gif Results:
                     </h1>
-            <div class="container hero-body">
+            <div class="container hero-body has-text-centered">
                 <form name="search" action='/test_html' method="get">
                     <div class="columns has-text-centered">
                     <div class="column is-half"><input id="searchBar" type="text" placeholder="Search.." class = 'input is-rounded is-small' name="search" required></div>
                     <div class="column is-half"><button type="submit" class='my-button' value="Search">Search  <i style='margin-left:3px;'class="fab fa-searchengin"></i></button></div>
                   </div>
                 </form>
+                <br>
+                <a type="submit" href='https://api.tenor.com/v1/search?q=random&key=FLT5NN3BW81L&limit=10' target="_blank" class='button is-info' value="random" style="margin: 0 auto;">Random Gifs  <i style='margin-left:3px;'class="fab fa-searchengin"></i></a></<button>
             </div>
             </section>
         <div class="columns gif-section">
