@@ -22,10 +22,7 @@ app.py explained:
     contains 2 routes
     the 1st route redirects the user to gif search
     2nd route sends you to random gifs
-
-
-
-
+    gifs are loaded from tenor.com using their api and api key
 
 # How to Use This Starter Code
 

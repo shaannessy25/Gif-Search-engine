@@ -35,14 +35,14 @@ def test_html():
 
 @app.route('/random')
 def test_random():
-''' This route displays a random gif when the user clicks the random button
-'''
+    ''' This route displays a random gif when the user clicks the random button
+        load the random gifs using the urls for the smaller GIF sizes '''
     query_string = "https://api.tenor.com/v1/search?q=random&key={}&limit={}".format(api_key, lmt)
 
     r = requests.get(query_string)
     gifs = []
     if r.status_code == 200:
-        # load the GIFs using the urls for the smaller GIF sizes
+        
         r_json = r.json()
         result_json = r_json["results"]
         for result in result_json:
