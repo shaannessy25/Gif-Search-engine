@@ -3,8 +3,8 @@ from flask import Flask, render_template, request
 import requests 
 
 
-lmt = 10                    #
-api_key = "FLT5NN3BW81L"
+lmt = 10                    #sets the correct amount of gif images which is 10
+api_key = "FLT5NN3BW81L"    #api key allows us to access the api
 
 app = Flask(__name__)
 @app.route('/')
@@ -22,10 +22,10 @@ def test_html():
 
     r = requests.get(query_string)
     gifs = []
-    if r.status_code == 200:
+    if r.status_code == 200:            # the clients request has succeeded
         r_json = r.json()
         result_json = r_json["results"]
-        for result in result_json:
+        for result in result_json:              #this loops through the search results, puts it into a list and prints gifs
             gif_path = result["media"][0]["mediumgif"]["url"]
             gifs.append(gif_path)
         print(gifs)
@@ -37,15 +37,16 @@ def test_html():
 def test_random():
     ''' This route displays a random gif when the user clicks the random button
         load the random gifs using the urls for the smaller GIF sizes '''
+
     query_string = "https://api.tenor.com/v1/search?q=random&key={}&limit={}".format(api_key, lmt)
 
     r = requests.get(query_string)
     gifs = []
-    if r.status_code == 200:
+    if r.status_code == 200:                    # the clients request has succeeded
         
-        r_json = r.json()
+        r_json = r.json()                       #json objects contains the gif results
         result_json = r_json["results"]
-        for result in result_json:
+        for result in result_json:                  # this loop 
             gif_path = result["media"][0]["mediumgif"]["url"]
             gifs.append(gif_path)
         print(gifs)
