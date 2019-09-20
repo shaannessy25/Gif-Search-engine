@@ -2,21 +2,28 @@
     1. Click on search bar
     2. Type a noun, phrase, or adjective
     3. Click on the search buttton (or press enter)
-    4. View gifs based on 
+    4. View gifs based on search
 
 # files:
-    /templates
-        base.html (loads the )
-        gif.html (sets template to pull gif images and displayed)
-        gifs.html (runs the html file once user puts enters a search)
-        index.html (extends base.html)
-        random.html (html route for random gifs )
+    /Gif-Search-Engine
+        /static
+            style.css (styles the html files)
+        /templates
+            base.html (loads the initial page )
+            gif.html (sets template to pull gif images and displayed)
+            gifs.html (runs the html file once user puts enters a search)
+            index.html (extends base.html)
+            random.html (html route for random gifs )
 
-    /static
-        style.css (html styles)
+ 
+# app.py:
+    1. Contains routes
+    2. Pulls data from tenor api
+    3. Displays gif images
+# second.py:
+    1. Allows us to make our site scalable and run efficiently
 
-app.py (contains all the app routes)
-second.py (pulls from tornado)
+
 
 app.py explained:
     contains 2 routes
