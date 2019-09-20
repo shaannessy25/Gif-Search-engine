@@ -1,10 +1,10 @@
-Gif Search Instructions:
+# Gif Search Instructions:
     1. Click on search bar
     2. Type a noun, phrase, or adjective
     3. Click on the search buttton (or press enter)
     4. View gifs based on 
 
-files:
+# files:
     /templates
         base.html (loads the )
         gif.html (sets template to pull gif images and displayed)
@@ -24,31 +24,6 @@ app.py explained:
     2nd route sends you to random gifs
     gifs are loaded from tenor.com using their api and api key
 
-# How to Use This Starter Code
-
-To create your own repository using this code:
-
-1. Clone the repository onto your computer using the `git clone` command
-1. Run `git remote remove origin` to disconnect the code from Make-School-Labs
-1. In GitHub.com, create your own repository. **IMPORTANT**: Do not add a README
-1. Run `git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO_NAME.git`, replacing YOUR_USERNAME with your username and YOUR_REPO_NAME with your repository name
-1. Now you should be able to add, commit, and push as normal!
-
-# How to Run This Starter Code
-
-You may need to install `flask` and/or `requests`. To do so, run:
-
-```bash
-pip3 install flask
-pip3 install requests
-```
-
-To run, open the folder containing `app.py` in a Terminal instance, and run:
-
-```bash
-export FLASK_ENV=development
-flask run
-```
 
 # Resources
 
