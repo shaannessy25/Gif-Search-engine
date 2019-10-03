@@ -1,10 +1,15 @@
 
 from flask import Flask, render_template, request
 import requests 
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+TENOR_API_KEY = os.getenv("TENOR_API_KEY")
 
 lmt = 10                    #sets the correct amount of gif images which is 10
-api_key = "FLT5NN3BW81L"    #api key allows us to access the api
+api_key = TENOR_API_KEY  #api key allows us to access the api
 
 app = Flask(__name__)
 @app.route('/')
@@ -25,7 +30,7 @@ def test_html():
     if r.status_code == 200:            # the clients request has succeeded
         r_json = r.json()
         result_json = r_json["results"]
-        for result in result_json:              #this loops through the search results, puts it into a list and prints gifs
+        for result in result_json:              #this loops through the search results, puts it into a list and prints 
             gif_path = result["media"][0]["mediumgif"]["url"]
             gifs.append(gif_path)
         print(gifs)
